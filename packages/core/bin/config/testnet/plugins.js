@@ -16,9 +16,9 @@ module.exports = {
         maxTransactionsPerSender: process.env.CORE_TRANSACTION_POOL_MAX_PER_SENDER || 300,
         allowedSenders: [],
         dynamicFees: {
-            enabled: true,
-            minFeePool: 1000,
-            minFeeBroadcast: 1000,
+            enabled: false,
+            minFeePool: 3000,
+            minFeeBroadcast: 3000,
             addonBytes: {
                 transfer: 100,
                 secondSignature: 250,
@@ -34,9 +34,9 @@ module.exports = {
     },
     "@arkecosystem/core-p2p": {
         server: {
-            port: process.env.CORE_P2P_PORT || 4000,
+            port: process.env.CORE_P2P_PORT || 4002,
         },
-        minimumNetworkReach: 5,
+        minimumNetworkReach: 2,
     },
     "@arkecosystem/core-blockchain": {},
     "@arkecosystem/core-api": {
